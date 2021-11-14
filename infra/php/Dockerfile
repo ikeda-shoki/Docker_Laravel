@@ -14,4 +14,8 @@ RUN apt-get update && \
 
 COPY ./php.ini /usr/local/etc/php/php.ini
 
+# Node.jsをインストール
+RUN curl -SL https://deb.nodesource.com/setup_16.x | bash
+RUN apt-get install -y nodejs
+
 WORKDIR /work
